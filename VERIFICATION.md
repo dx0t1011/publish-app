@@ -14,7 +14,7 @@
 | App logo | `assets/logo-120.png` (ровно 120×120) |
 | Application home page | `https://dx0t1011.github.io/publish-app/` |
 | Application privacy policy link | `https://dx0t1011.github.io/publish-app/privacy.html` |
-| Application terms of service link | (необязательно, оставить пустым) |
+| Application terms of service link | `https://dx0t1011.github.io/publish-app/terms.html` |
 | Authorized domains | `dx0t1011.github.io` |
 | Developer contact information | `bs2accc@gmail.com` |
 
@@ -63,7 +63,7 @@ distributed as a product.
 
 - [ ] нет плейсхолдеров: `grep -rn "PLACEHOLDER" .` ничего не находит
 - [ ] название приложения одинаково в консоли и в `<title>`
-- [ ] обе страницы открываются в инкогнито
+- [ ] все три страницы (главная, политика, условия) открываются в инкогнито
 - [ ] логотип загружен (120×120)
 - [ ] «Publish app» нажато — статус In production
 - [ ] `node publish/check.mjs` показывает нужный канал

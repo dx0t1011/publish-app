@@ -14,6 +14,7 @@
 |---|---|
 | `index.html` | домашняя страница приложения (то, что Google называет Application home page) |
 | `privacy.html` | политика конфиденциальности — обязательна для верификации |
+| `terms.html` | условия использования — поле «Application terms of service link» |
 | `404.html` | простая страница ошибки |
 | `.nojekyll` | отключает обработку Jekyll, чтобы файлы отдавались как есть |
 | `assets/logo-120.png` | логотип ровно 120×120 — его же грузим в OAuth consent screen |
@@ -30,6 +31,7 @@
 | Репозиторий | https://github.com/dx0t1011/publish-app (публичный) |
 | Главная | https://dx0t1011.github.io/publish-app/ |
 | Политика | https://dx0t1011.github.io/publish-app/privacy.html |
+| Условия использования | https://dx0t1011.github.io/publish-app/terms.html |
 | Pages | ветка `main`, папка `/ (root)`, включён через API |
 
 Обновить сайт после правок:
