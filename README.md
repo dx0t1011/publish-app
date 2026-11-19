@@ -43,13 +43,10 @@ cd /tmp/publish-app-sync && git add -A && git commit -m "update site" && git pus
 Проще: правь `site/` в проекте, затем синхронизируй (после первого клона
 репозитория достаточно копировать файлы в клон и пушить).
 
-## Добавить почту в контакт
+## Почта в контакте
 
-```bash
-python3 tools/check_site.py --email "твоя@почта"   # подставит её в index.html и privacy.html
-```
-
-Затем синхронизировать репозиторий (команды выше) и проверить:
+Уже стоит: `bs2accc@gmail.com` в `index.html` и `privacy.html`.
+Поменять — правка в этих файлах и `./tools/sync_site.sh`. Проверить:
 
 ```bash
 python3 tools/check_site.py --url https://dx0t1011.github.io/publish-app/

@@ -10,13 +10,13 @@
 | Поле | Значение |
 |---|---|
 | App name | `Warm Burrow Publisher` |
-| User support email | `ПОЧТА` |
+| User support email | `bs2accc@gmail.com` |
 | App logo | `assets/logo-120.png` (ровно 120×120) |
 | Application home page | `https://dx0t1011.github.io/publish-app/` |
 | Application privacy policy link | `https://dx0t1011.github.io/publish-app/privacy.html` |
 | Application terms of service link | (необязательно, оставить пустым) |
 | Authorized domains | `dx0t1011.github.io` |
-| Developer contact information | `ПОЧТА` |
+| Developer contact information | `bs2accc@gmail.com` |
 
 ## Scopes
 
