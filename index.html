@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warm Burrow Publisher</title>
+<meta name="description" content="Warm Burrow Publisher is a small internal tool that uploads the owner's own video episodes to the Warm Burrow Stories YouTube channel and schedules their publication.">
+<link rel="icon" href="assets/logo-120.png">
+<style>
+  :root { --paper:#F2EAD9; --ink:#342F19; --muted:#6B5B3E; --coral:#C98A72; --sage:#BDB682; --sky:#B3CDD6; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:17px/1.65 -apple-system, "Segoe UI", Georgia, serif; color:var(--ink); background:var(--paper); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { display:flex; align-items:center; gap:14px; margin-bottom:26px; }
+  header img { width:56px; height:56px; border-radius:50%; border:1px solid #0002; }
+  header .t { font-size:21px; font-weight:600; line-height:1.2; }
+  header .s { font-size:14px; color:var(--muted); }
+  h1 { font-size:32px; line-height:1.2; margin:26px 0 10px; }
+  h2 { font-size:19px; margin:34px 0 10px; }
+  p { margin: 0 0 14px; }
+  .hero { width:100%; border-radius:14px; display:block; margin: 6px 0 4px; }
+  .cap { font-size:13px; color:var(--muted); margin: 6px 0 0; }
+  .card { background:#fff9; border:1px solid #0001; border-radius:16px; padding:20px 22px; margin:18px 0; }
+  ul { padding-left:20px; margin:8px 0 14px; }
+  li { margin: 5px 0; }
+  code { background:#0000000d; padding:2px 6px; border-radius:6px; font-size:14px; }
+  table { width:100%; border-collapse:collapse; font-size:15px; margin:10px 0 16px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid #0001; vertical-align:top; }
+  th { font-weight:600; color:var(--muted); font-size:14px; }
+  a { color:#8C684D; }
+  footer { margin-top:44px; padding-top:18px; border-top:1px solid #0001; font-size:14px; color:var(--muted); }
+  .pill { display:inline-block; font-size:13px; background:#0000000d; border-radius:999px; padding:3px 10px; margin:0 6px 6px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img src="assets/logo-120.png" alt="Warm Burrow Publisher logo">
+    <div>
+      <div class="t">Warm Burrow Publisher</div>
+      <div class="s">Internal publishing tool · for one channel</div>
+    </div>
+  </header>
+
+  <h1>A small tool that publishes our own episodes.</h1>
+  <p>Warm Burrow Publisher uploads finished video episodes to the
+     <a href="https://www.youtube.com/">Warm Burrow Stories</a> YouTube channel and schedules when each
+     episode goes live. It runs on the channel owner's computer from the command line.</p>
+
+  <img class="hero" src="assets/hero.jpg" alt="Warm Burrow Stories channel artwork">
+  <p class="cap">The channel this tool publishes for: papercraft tea house stories, 24 seconds per episode.</p>
+
+  <h2>What the tool does</h2>
+  <div class="card">
+    <ul>
+      <li>Uploads a finished video file (<code>.mp4</code>) to the owner's own channel.</li>
+      <li>Sets the title, description, tags, category and thumbnail.</li>
+      <li>Schedules publication: the video is uploaded as private with a publish time, and YouTube
+          makes it public automatically at that minute.</li>
+      <li>Keeps a local record of what was uploaded, so the same file is never uploaded twice.</li>
+    </ul>
+  </div>
+
+  <h2>How it works</h2>
+  <table>
+    <tr><th>Step</th><th>What happens</th></tr>
+    <tr><td>1</td><td>The owner runs <code>node publish/auth.mjs</code> once and approves access in
+        Google's consent screen, choosing the correct YouTube channel.</td></tr>
+    <tr><td>2</td><td>For each episode the owner runs
+        <code>node publish/upload.mjs --ep episodes/EP002-tea-and-rain</code>.</td></tr>
+    <tr><td>3</td><td>The tool uploads the file and sets the scheduled publication date.
+        YouTube publishes it.</td></tr>
+  </table>
+  <p class="cap">The tool refuses to upload if the authorised channel is not the one recorded for this
+     project — a safeguard for accounts that manage more than one channel.</p>
+
+  <h2>Permissions and data</h2>
+  <div class="card">
+    <p>Warm Burrow Publisher requests two YouTube scopes:</p>
+    <p>
+      <span class="pill">youtube.upload</span>
+      <span class="pill">youtube</span>
+    </p>
+    <ul>
+      <li><strong>youtube.upload</strong> — upload the owner's own video files.</li>
+      <li><strong>youtube</strong> — set the thumbnail, add the video to the channel playlist, and read
+          the channel name to make sure uploads go to the right channel.</li>
+    </ul>
+    <p>No viewer data, subscriber data, comments or analytics are read. Nothing is shared with third
+       parties. Details: <a href="privacy.html">Privacy Policy</a>.</p>
+  </div>
+
+  <h2>Who it is for</h2>
+  <p>One person: the owner of the Warm Burrow Stories channel. There is no sign-up, no public account,
+     no multi-tenant use, and no other users' data is ever accessed. The tool is not distributed as a
+     product.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about the tool or its data handling — open an issue at
+     <a href="https://github.com/dx0t1011/publish-app/issues">github.com/dx0t1011/publish-app/issues</a>.</p>
+
+  <footer>
+    This application uses YouTube API Services. By using it, the owner agrees to the
+    <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the
+    <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.<br>
+    Last updated: 20 November 2026 · <a href="privacy.html">Privacy Policy</a>
+  </footer>
+
+</div>
+</body>
+</html>

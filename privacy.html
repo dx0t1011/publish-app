@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Warm Burrow Publisher</title>
+<link rel="icon" href="assets/logo-120.png">
+<style>
+  :root { --paper:#F2EAD9; --ink:#342F19; --muted:#6B5B3E; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:17px/1.65 -apple-system, "Segoe UI", Georgia, serif; color:var(--ink); background:var(--paper); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+  h1 { font-size:30px; margin:0 0 6px; }
+  h2 { font-size:18px; margin:30px 0 8px; }
+  .muted { color:var(--muted); }
+  ul { padding-left:20px; }
+  li { margin:5px 0; }
+  code { background:#0000000d; padding:2px 6px; border-radius:6px; font-size:14px; }
+  a { color:#8C684D; }
+  .top { display:flex; align-items:center; gap:12px; margin-bottom:22px; }
+  .top img { width:44px; height:44px; border-radius:50%; border:1px solid #0002; }
+  .top a { text-decoration:none; }
+  footer { margin-top:40px; padding-top:16px; border-top:1px solid #0001; font-size:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <img src="assets/logo-120.png" alt="">
+    <a href="index.html">← Warm Burrow Publisher</a>
+  </div>
+
+  <h1>Privacy Policy</h1>
+  <p class="muted">Warm Burrow Publisher · last updated 20 November 2026</p>
+
+  <p>Warm Burrow Publisher ("the application") is a command-line tool used by the owner of the
+     YouTube channel <strong>Warm Burrow Stories</strong> to upload and schedule that channel's own
+     videos. This policy explains what data the application handles and how.</p>
+
+  <h2>1. This application uses YouTube API Services</h2>
+  <p>The application uses YouTube API Services. By using the application the owner agrees to be bound by
+     the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data
+     is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+  <h2>2. What the application accesses</h2>
+  <ul>
+    <li><strong>YouTube Data API v3</strong> with the scopes
+        <code>https://www.googleapis.com/auth/youtube.upload</code> and
+        <code>https://www.googleapis.com/auth/youtube</code>.</li>
+    <li>Used to: upload a video file to the owner's own channel; set title, description, tags, category
+        and thumbnail; schedule the publication time; add the video to the channel's own playlist; read
+        the channel name and statistics to confirm that uploads target the correct channel.</li>
+  </ul>
+
+  <h2>3. What the application does not do</h2>
+  <ul>
+    <li>It does not read, collect or store viewer, subscriber, comment or analytics data.</li>
+    <li>It does not access Gmail, Google Drive, Calendar, Contacts or any other Google service.</li>
+    <li>It does not serve third parties. There is no sign-up, no public account, and no other users.</li>
+    <li>It does not sell, rent or share data with advertisers or any third party.</li>
+  </ul>
+
+  <h2>4. What is stored, and where</h2>
+  <ul>
+    <li>A Google OAuth <strong>refresh token</strong> for the owner's own channel. It is stored only on
+        the owner's computer in a local file with owner-only permissions
+        (<code>publish/.env</code>), and is never committed to a public repository or sent anywhere
+        except to Google's OAuth endpoint (<code>oauth2.googleapis.com</code>).</li>
+    <li>A local log of uploaded videos (video id, publication time, file fingerprint) kept for the
+        owner's records.</li>
+    <li>Video files stay on the owner's computer. The uploaded copy is stored by YouTube under the
+        YouTube Terms of Service.</li>
+  </ul>
+
+  <h2>5. Data sharing</h2>
+  <p>No data is shared with third parties. Requests are sent only to Google APIs
+     (<code>googleapis.com</code>, <code>oauth2.googleapis.com</code>).</p>
+
+  <h2>6. Retention, deletion and revoking access</h2>
+  <ul>
+    <li>Access can be revoked at any time at
+        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li>Deleting the local <code>.env</code> file removes the stored token from the computer.</li>
+    <li>Uploaded videos can be deleted by the owner in YouTube Studio at any time.</li>
+    <li>The local upload log can be deleted at any time; it lives only on the owner's computer.</li>
+  </ul>
+
+  <h2>7. Security</h2>
+  <p>The token is stored with owner-only file permissions and transmitted only over HTTPS to Google.
+     The application is not installed on shared or public machines.</p>
+
+  <h2>8. Children</h2>
+  <p>The application is not directed to children and is not used by third parties.</p>
+
+  <h2>9. Changes</h2>
+  <p>If this policy changes, the updated version is published on this page with a new date.</p>
+
+  <h2>10. Contact</h2>
+  <p>Questions about this policy or data handling — open an issue at
+     <a href="https://github.com/dx0t1011/publish-app/issues">github.com/dx0t1011/publish-app/issues</a>.</p>
+
+  <footer class="muted">
+    <a href="index.html">Home</a> ·
+    <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> ·
+    <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
+  </footer>
+
+</div>
+</body>
+</html>
